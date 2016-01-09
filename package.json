@@ -12,8 +12,7 @@
     "url": "https://github.com/modularcode/modular-admin-html/issues"
   },
   "homepage": "https://github.com/modularcode/modular-admin-html",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "glob": "^5.0.14",
     "gulp": "^3.9.0",
@@ -28,16 +27,30 @@
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.0",
+    "gulp-typescript": "^2.10.0",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.4",
-    "gulp-typescript": "^2.10.0",
-    "typescript": "^1.7.5",
-    "main-bower-files": "^2.9.0"
+    "jspm": "^0.16.19",
+    "main-bower-files": "^2.9.0",
+    "typescript": "^1.7.5"
   },
   "scripts": {
     "gulp": "gulp --gulpfile build/gulpfile.js",
     "start": "npm run gulp",
     "deploy": "npm run gulp deploy"
+  },
+  "jspm": {
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-beta.1",
+      "daneden/animate.css": "github:daneden/animate.css@^3.5.1",
+      "font-awesome": "npm:font-awesome@^4.5.0",
+      "jquery": "npm:jquery@^2.2.0",
+      "krzysu/flot.tooltip": "github:krzysu/flot.tooltip@^0.8.5",
+      "twbs/bootstrap.git": "github:twbs/bootstrap@4.0.0-alpha.2"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
   }
 }
