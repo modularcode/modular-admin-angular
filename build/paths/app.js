@@ -57,63 +57,13 @@ var destDir 	= config.destDir;
 
 	/*
 		Each page file represents a page which will be rendered into .html page.
-		Pages can extend layouts.
-
 	*/
 
 	exports.pages = {
-		src: srcDir + "/**/*-page.hbs",
+		src: srcDir + "/**/*.html",
 		dest: destDir + "/"
 	};
 
-
-/***********************************************
-*		Application template files
-************************************************/
-	
-	/*
-		All template files in application.
-		Those should registered as handlebars partials
-		in order to use feature like includes or layouts
-	*/
-
-	exports.templates = {
-		src: srcDir + "/**/*.hbs",
-		dest: destDir + "/templates"
-	};
-
-/***********************************************
-*  	Application handlebars helpers files
-************************************************/
-
-	/*
-		Handlebars helpers files
-		Read more: http://handlebarsjs.com/block_helpers.html
-	*/
-
-	exports.helpers = {
-		src: [
-			srcDir + "/**/*-helper.js",
-			rootDir + '/node_modules/handlebars-layouts/index.js',
-		],
-		dest: destDir + "/templates"
-	};
-
-
-/***********************************************
-*		Application layout files
-************************************************/
-
-	/*
-		Layouts are used for "wrapping" the content of individual pages with common elements, 
-		such as the <head></head> and footer sections, which usually contain necessities 
-		such as <link> and <script> tags.
-	*/
-
-	exports.layouts = {
-		src: srcDir + "/**/*-layout.hbs",
-		dest: destDir + "/templates"
-	};
 
 /***********************************************
 *		Application asset files

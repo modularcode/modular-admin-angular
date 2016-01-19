@@ -13,8 +13,7 @@ var utils = require('./utils/utils');
 var config = require('./config');
 
 var paths = {
-	app: 	require('./paths/app'),
-	vendor: require('./paths/vendor')
+	app: 	require('./paths/app')
 };
 
 
@@ -23,7 +22,6 @@ var paths = {
 *********************************************/
 
 var buildTasks = utils.loadTasks(gulp, plugins, paths);
-buildTasks.splice(1, 1);
 
 gulp.task('build', buildTasks);
 
@@ -44,14 +42,9 @@ gulp.task('connect', function() {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
 	// When template changes recompile .html pages
-	// plugins.watch(paths.app.templates.src, function() {
-	//     gulp.start('app-pages');
-	// });
-
-	// When context file changes recompile .html pages
-	// plugins.watch(config.srcDir + "/**/.context.js", function() {
-	//     gulp.start('app-pages');
-	// });
+	plugins.watch(paths.app.pages.src, function() {
+	    gulp.start('app-pages');
+	});
 
 	// When script changes recompile scripts
 	plugins.watch(paths.app.scripts.src, function() {
