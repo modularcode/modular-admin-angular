@@ -13,6 +13,7 @@ System.config({
     "font-awesome": "npm:font-awesome@4.5.0",
     "jquery": "npm:jquery@2.2.0",
     "krzysu/flot.tooltip": "github:krzysu/flot.tooltip@0.8.5",
+    "twbs/bootstrap": "github:twbs/bootstrap@4.0.0-alpha.2",
     "twbs/bootstrap.git": "github:twbs/bootstrap@4.0.0-alpha.2",
     "twbs/bootstrap.git#v4-dev": "github:twbs/bootstrap@3.3.6",
     "twbs/bootstrap.git#v4.0.0-alpha.2": "github:twbs/bootstrap@3.3.6",

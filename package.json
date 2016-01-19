@@ -47,10 +47,19 @@
       "font-awesome": "npm:font-awesome@^4.5.0",
       "jquery": "npm:jquery@^2.2.0",
       "krzysu/flot.tooltip": "github:krzysu/flot.tooltip@^0.8.5",
+      "twbs/bootstrap": "github:twbs/bootstrap@4.0.0-alpha.2",
       "twbs/bootstrap.git": "github:twbs/bootstrap@4.0.0-alpha.2"
     },
     "devDependencies": {
       "typescript": "npm:typescript@^1.6.2"
+    },
+    "overrides": {
+      "github:twbs/bootstrap@4.0.0-alpha.2": {
+        "main": "js/bootstrap",
+        "directories": {
+          "lib": "scss"
+        }
+      }
     }
   }
 }
